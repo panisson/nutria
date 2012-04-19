@@ -39,7 +39,7 @@ requests = []
 scores = {}
 players = {}
 
-f = open("/home/panisson/development/hackathon/pywebsocket/piemontesina.txt")
+f = open("piemontesina.txt")
 piemontesina = f.readlines()
 
 def process(message):
