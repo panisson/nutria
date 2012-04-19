@@ -1,4 +1,10 @@
-First, get the mod_pywebsocket package by running:
+First, clone this repository:
+
+```
+$ git clone git://github.com/panisson/nutria.git
+```
+
+After, go to your repository directory and get the mod_pywebsocket package by running:
 
 ```
 $ svn checkout http://pywebsocket.googlecode.com/svn/trunk/src/mod_pywebsocket mod_pywebsocket
