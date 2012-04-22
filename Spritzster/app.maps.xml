@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<map xmlns="http://initd.org/ns/wok-1.0"
+     xmlns:wok="clr-namespace:Wok.Core;assembly=Wok.Core"
+     xmlns:woku="clr-namespace:Wok.Core.Utils;assembly=Wok.Core"
+     xmlns:wokc="clr-namespace:Wok.Core.Components;assembly=Wok.Core"
+     xmlns:wrcc="clr-namespace:WokRecipes.Core.Components;assembly=WokRecipes.Core"
+     xmlns:profiling="clr-namespace:WokRecipes.Profiling;assembly=WokRecipes.Profiling"
+     xmlns:publishing="clr-namespace:WokRecipes.Publishing;assembly=WokRecipes.Publishing"
+     xmlns:app="clr-namespace:LeDueMatote;assembly=LeDueMatote">
+
+    <!-- Non-visual stuff, always available. -->
+
+    <path pattern="*" mode="ContinueOnMatch">
+        <woku:SkinService FullName="skin-default" ThemePath="skins/" DefaultTheme="default"/>
+        <!--wrcc:WokDbConnectionService FullName="test" ConnectionName="test"/-->
+        <wrcc:ExceptionSkin FullName="errors"/>
+    </path>
+
+    <!--Matches static skin files, possibly skinning them. Also note that CSS
+        files are served using the special CssFile component to make sure url()
+        directives work well with virtual hosting. -->
+
+    <path pattern="^(/skins/|/static/images/|/res/)" mode="StopOnMatch">
+        <path pattern="\.css$">
+            <wokc:CssFile CacheControl="public,max-age=604800"/>
+        </path>
+        <path pattern="*">
+            <wokc:StaticFile CacheControl="public,max-age=604800"/>
+        </path>
+    </path>
+
+    <path pattern="^/?$" mode="StopOnMatch">
+        <wokc:HtmlTemplate Path="layout.xml"/>
+        <wokc:HtmlFragment Path="home.xml" TargetSlot="#wok-main"/>
+    </path>
+</map>

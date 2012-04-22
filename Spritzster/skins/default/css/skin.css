@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Averia Gruesa Libre';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Averia Gruesa Libre'), local('/skins/default/css/10vbZTOoN6T8D-nvDzwRF-n6_Kji9IOFAqEuXypQ7aQ.woff') format('woff');
+}
+
+body { background: black; color: white; height: 100%; }
+body > div { margin: 20px auto; width: 1000px; }
+h1   { margin: 0 0 12px 0; font-family: 'Averia Gruesa Libre', cursive; font-size: 32px; text-align: center; }
+
+#holder { position: relative; width: 800px; }
+#holder > div { display: block; position: absolute; background: white; border: 2px solid black; top: 50; left: 50%; }
+
+#players { float: right; width: 190px; padding-left: 10px; }

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spritzster", "Spritzster\Spritzster.csproj", "{467D11FB-9C88-491C-B990-3BB858AA3CF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{467D11FB-9C88-491C-B990-3BB858AA3CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467D11FB-9C88-491C-B990-3BB858AA3CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467D11FB-9C88-491C-B990-3BB858AA3CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467D11FB-9C88-491C-B990-3BB858AA3CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Spritzster\Spritzster.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.FileWidth = 132
+		$1.inheritsSet = VisualStudio
+		$1.inheritsScope = text/plain
+		$1.scope = text/plain
+	EndGlobalSection
+EndGlobal

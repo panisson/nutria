@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<configuration>
+  <appSettings>
+  </appSettings>
+  <connectionStrings>
+      <add name="leduematote" providerName="Npgsql"
+           connectionString="server=127.0.0.1;user id=test;database=leduematote;timeout=2;pooling=false"/>
+  </connectionStrings>
+  <system.net>
+      <mailSettings>
+          <smtp>
+              <network host="localhost"/>
+          </smtp>
+      </mailSettings>
+  </system.net>
+  <system.data>
+    <DbProviderFactories>
+      <add name="Npgsql Data Provider" description=".NET Data Provider for PostgreSQL"
+           invariant="Npgsql" support="FF" type="Npgsql.NpgsqlFactory,Npgsql" />
+    </DbProviderFactories>
+  </system.data>
+  <system.web>
+	<customErrors mode="Off"/>
+    <authentication mode="None"/>
+    <httpHandlers>
+      <clear />
+      <add verb="GET,HEAD,POST,PUT,DELETE" path="*" type="Wok.Adapter.AspNet.Driver, Wok.Adapter.AspNet"/>
+    </httpHandlers>
+  </system.web>
+</configuration>

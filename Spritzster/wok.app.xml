@@ -1,0 +1,24 @@
+﻿<app
+    xmlns="http://initd.org/ns/wok-1.0"
+    xmlns:wok="clr-namespace:Wok.Core;assembly=Wok.Core"
+    xmlns:wokp="clr-namespace:Wok.Core.Processors;assembly=Wok.Core"
+    xmlns:profiling="clr-namespace:WokRecipes.Profiling;assembly=WokRecipes.Profiling"
+    xmlns:publishing="clr-namespace:WokRecipes.Publishing;assembly=WokRecipes.Publishing">
+    <application-configuration>
+        <wokp:VersionInfo
+            SourceVersion="6d8c911"
+            BuildVersion="1" />
+    </application-configuration>
+    <security-modules>
+    </security-modules>
+    <request-processors>
+        <wokp:Debug />
+        <wokp:ActionView />
+        <wokp:Rest />
+        <wokp:VirtualHost />
+    </request-processors>
+    <url-mappers>
+        <wok:XmlUrlMapper
+            MapFile="app.maps.xml" />
+    </url-mappers>
+</app>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{467D11FB-9C88-491C-B990-3BB858AA3CF6}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Spritzster</RootNamespace>
+    <AssemblyName>Spritzster</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="BeforeBuild" command="../libs/WokVersionInfoBump.exe wok.app.xml" workingdir="${ProjectDir}" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Newtonsoft.Json.Net35">
+      <HintPath>..\libs\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\libs\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Roar">
+      <HintPath>..\libs\Roar.dll</HintPath>
+    </Reference>
+    <Reference Include="Tesseract">
+      <HintPath>..\libs\Tesseract.dll</HintPath>
+    </Reference>
+    <Reference Include="Wok.Adapter.AspNet">
+      <HintPath>..\libs\Wok.Adapter.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Wok.Core">
+      <HintPath>..\libs\Wok.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WokRecipes.Core">
+      <HintPath>..\libs\WokRecipes.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties VerifyCodeBehindFields="true" VerifyCodeBehindEvents="true">
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="true" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Content Include="NLog.config" />
+    <Content Include="web.config" />
+    <Content Include="res\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="res\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="res\bootstrap\css\bootstrap.css" />
+    <Content Include="res\bootstrap\css\bootstrap.min.css" />
+    <Content Include="res\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="res\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="res\bootstrap\js\bootstrap.js" />
+    <Content Include="res\bootstrap\js\bootstrap.min.js" />
+    <Content Include="res\jquery\js\jquery-1.7.2.min.js" />
+    <Content Include="res\jquery\js\jquery.cookie.js" />
+    <Content Include="res\jquery\js\jquery.form.js" />
+    <Content Include="res\modernizr\modernizr-2.5.3.min.js" />
+    <Content Include="res\wok\css\wok.bootstrap.css" />
+    <Content Include="res\wok\js\innerxhtml.js" />
+    <Content Include="res\wok\js\parseuri.js" />
+    <Content Include="res\wok\js\wok.core.js" />
+    <Content Include="skins\default\css\skin.css" />
+    <Content Include="skins\default\js\spritzster.js" />
+    <Content Include="skins\default\js\easeljs-0.4.1.min.js" />
+    <Content Include="skins\default\js\spritzster.Zombie.js" />
+    <Content Include="skins\default\img\background1.png" />
+    <Content Include="skins\default\img\zombie_right.png" />
+    <Content Include="skins\default\img\zombie_left.png" />
+    <Content Include="skins\default\js\spritzster.Pipistrello.js" />
+    <Content Include="skins\default\js\spritzster.Avatar.js" />
+    <Content Include="skins\default\img\girl.png" />
+    <Content Include="skins\default\img\nerd.png" />
+    <Content Include="skins\default\img\pipistrello.png" />
+    <Content Include="skins\default\img\rocker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NLog.config.template" />
+    <None Include="app.maps.xml" />
+    <None Include="web.config.template" />
+    <None Include="wok.app.xml" />
+    <None Include="wok.app.xml.in" />
+    <None Include="skins\layout.xml" />
+    <None Include="skins\default\css\AveriaGruesaLibre-Regular.ttf" />
+    <None Include="skins\home.xml" />
+  </ItemGroup>
+</Project>

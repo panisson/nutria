@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      autoReload="true" internalLogFile="logs/nlog.log" internalLogLevel="Warn">
+    <extensions>
+      <add assembly="Wok.Core"/>
+    </extensions>
+    <targets>
+        <target name="access" xsi:type="Console" layout="${message}"/>
+        <target name="events" xsi:type="Console" layout="${wok:event-start} ${wok:event=indent}(${wok:event=type}) ${message} [${wok:event=ms} ms]"/>
+        <target name="aspnet" xsi:type="Console" layout="${wok:event-start} ${wok:event=indent}(${wok:event=type}) ${message} [${wok:event=ms} ms]"/>
+    </targets>
+    <rules>
+        <logger name="access" levels="Info" writeTo="access"/>
+        <logger name="events" levels="Info" writeTo="events"/>
+        <logger name="aspnet" levels="Info" writeTo="aspnet"/>
+    </rules>
+</nlog>

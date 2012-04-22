@@ -1,1 +1,14 @@
 mod_pywebsocket
+*~
+*.pidb
+*.userprefs
+*.config
+*.usertasks
+*.swp
+bundle*
+build/
+test-results/
+cache/
+bin/
+Demo/blobs/
+

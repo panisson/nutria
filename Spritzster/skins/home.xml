@@ -1,0 +1,20 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:wok="http://initd.org/ns/tesseract-1.0">
+    <h1 title="Hipster Spritz Massively Multi Player Zombie Squash!">Spritzster! MMPZS</h1>
+    <div id="players">
+        <form class="form-inline">
+            <div>
+                <input class="input" type="text" name="nick" placeholder="Your hipst! name..."/><br /><br />
+                Choose an avatar:     
+                <div id="buttons" style="margin-top: 10px;">
+                           
+                    <button class="btn rocker" type="submit" value="rocker"><img width="40" src="/skins/default/img/rocker.png" /></button>
+                    <button class="btn nerd" type="submit" value="nerd"><img width="40" src="/skins/default/img/nerd.png" /></button>            
+                    <button class="btn girl" type="submit" value="girl"><img width="40" src="/skins/default/img/girl.png" /></button>            
+                </div>               
+            </div>
+         </form>
+         <span>Your Fellow Hipsters:</span>
+         <div id="hipsters"></div>
+     </div>
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</div>
